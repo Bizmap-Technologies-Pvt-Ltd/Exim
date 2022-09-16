@@ -31,7 +31,11 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    # "Project Template":"public/js/project_template.js",
+	"Task":"public/js/task.js"
+
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -95,13 +99,20 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
+doc_events = {
+    "Project Template":{
+        "validate":"pms.pms.custom_script.project_template.validate"
+    },
+    "Task":{
+        "after_insert": "pms.pms.custom_script.task.after_insert"
+    }
+
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
 #	}
-# }
+}
 
 # Scheduled Tasks
 # ---------------
