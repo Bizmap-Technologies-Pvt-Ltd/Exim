@@ -54,6 +54,7 @@ def make_material_request(source_name, target_doc=None):
             mr_row.project = source.project
             mr_row.description = item.description
             mr_row.uom = item.uom
+            mr_row.stock_uom = frappe.db.get_value("Item", {'name':item.item_code}, 'stock_uom')
     return get_mapped_doc("Task", source_name, {
         "Task": {
             "doctype": "Material Request",
