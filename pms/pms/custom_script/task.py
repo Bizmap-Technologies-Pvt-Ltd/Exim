@@ -52,6 +52,8 @@ def make_material_request(source_name, target_doc=None):
             mr_row.item_name = item.item_name
             mr_row.qty = item.qty
             mr_row.project = source.project
+            mr_row.description = item.description
+            mr_row.uom = item.uom
     return get_mapped_doc("Task", source_name, {
         "Task": {
             "doctype": "Material Request",

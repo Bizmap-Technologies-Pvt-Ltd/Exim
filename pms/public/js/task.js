@@ -11,7 +11,7 @@ frappe.ui.form.on('Task', {
 	            method: "pms.pms.custom_script.task.check_task_status",
 	            args: {"task_list": task_list},
 	            callback: function(r) {
-	                if(r.message) {
+	                if(r.message && frm.doc.is_material_required) {
                         frm.add_custom_button(__('Material Request'), function() {
 	                        frappe.model.open_mapped_doc({
 								method: "pms.pms.custom_script.task.make_material_request",
@@ -22,7 +22,7 @@ frappe.ui.form.on('Task', {
 	            }
 	        });
         }
-        else if (task_list.length == 0){
+        else if (task_list.length == 0 && frm.doc.is_material_required){
         	frm.add_custom_button(__('Material Request'), function() {
 				frappe.model.open_mapped_doc({
 					method: "pms.pms.custom_script.task.make_material_request",
