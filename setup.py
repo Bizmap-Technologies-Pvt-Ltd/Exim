@@ -9,9 +9,9 @@ from pms import __version__ as version
 setup(
 	name="pms",
 	version=version,
-	description="Project Management System",
-	author="Bizmap",
-	author_email="pms@bizmap.in",
+	description="project management application",
+	author="bizmap tech",
+	author_email="hello@bizmap.in",
 	packages=find_packages(),
 	zip_safe=False,
 	include_package_data=True,

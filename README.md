@@ -1,6 +1,6 @@
-## Pms
+## pms
 
-Project Management System
+project management application
 
 #### License
 

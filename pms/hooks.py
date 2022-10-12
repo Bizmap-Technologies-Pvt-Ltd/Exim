@@ -1,12 +1,12 @@
 from . import __version__ as app_version
 
 app_name = "pms"
-app_title = "Pms"
-app_publisher = "Bizmap"
-app_description = "Project Management System"
+app_title = "pms"
+app_publisher = "bizmap tech"
+app_description = "project management application"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
-app_email = "pms@bizmap.in"
+app_email = "hello@bizmap.in"
 app_license = "MIT"
 
 # Includes in <head>
@@ -31,11 +31,7 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = {
-    # "Project Template":"public/js/project_template.js",
-	"Task":"public/js/task.js"
-
-}
+# doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -99,20 +95,13 @@ doctype_js = {
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
-    "Project Template":{
-        "validate":"pms.pms.custom_script.project_template.validate"
-    },
-    "Task":{
-        "after_insert": "pms.pms.custom_script.task.after_insert"
-    }
-
+# doc_events = {
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
 #	}
-}
+# }
 
 # Scheduled Tasks
 # ---------------
@@ -190,3 +179,10 @@ user_data_fields = [
 # 	"pms.auth.validate"
 # ]
 
+# Translation
+# --------------------------------
+
+# Make link fields search translated document names for these DocTypes
+# Recommended only for DocTypes which have limited documents with untranslated names
+# For example: Role, Gender, etc.
+# translated_search_doctypes = []

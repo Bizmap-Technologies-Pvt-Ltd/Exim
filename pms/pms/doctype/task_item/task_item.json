@@ -7,8 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "item_code",
-  "description",
   "item_name",
+  "description",
   "uom",
   "qty"
  ],
@@ -19,13 +19,6 @@
    "in_list_view": 1,
    "label": "Item Code",
    "options": "Item"
-  },
-  {
-   "fetch_from": "item_code.description",
-   "fieldname": "description",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Description"
   },
   {
    "fetch_from": "item_code.item_name",
@@ -47,12 +40,17 @@
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Qty"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-09-19 13:40:05.812259",
+ "modified": "2022-09-19 13:53:42.800961",
  "modified_by": "Administrator",
  "module": "Pms",
  "name": "Task Item",
