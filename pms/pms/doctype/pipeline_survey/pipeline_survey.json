@@ -1,0 +1,300 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-11-09 22:17:00.831837",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pipeline_survey_basic_detials_section",
+  "naming_series",
+  "land",
+  "village",
+  "surveyer_name_1",
+  "column_break_5",
+  "date_of_land_identification",
+  "je_name",
+  "person_in_charge",
+  "surveyer_name_2",
+  "section_break_9",
+  "sub_division",
+  "household_as_per_list",
+  "column_break_12",
+  "block",
+  "gp",
+  "survey_details_section",
+  "borwell_point_latitude",
+  "borwell_point_longitude",
+  "column_break_20",
+  "main_line_110_mm_length_in_meters",
+  "distribution_line__90_mm_length_in_meters",
+  "length_of_road_cutting_in_meters",
+  "no_of_junctions_section",
+  "l_junctions",
+  "t_junctions",
+  "x_junctions",
+  "column_break_28",
+  "actual_household_count",
+  "household_difference",
+  "section_break_31",
+  "remarks",
+  "survey_attachments_section",
+  "survey_manual_drawing",
+  "household_details",
+  "column_break_36",
+  "surveyer_sign",
+  "peron_in_charge_sign",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "PIP-SURV-.YYYY.-.####"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Pipeline Survey",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "land",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Land ID",
+   "options": "Land Identification",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "land.village",
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "Village Name",
+   "options": "Location",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "pipeline_survey_basic_detials_section",
+   "fieldtype": "Section Break",
+   "label": "PIPELINE SURVEY BASIC DETAILS"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "land.date_of_land_identification",
+   "fieldname": "date_of_land_identification",
+   "fieldtype": "Date",
+   "label": "Date of Land Identification",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "land.je_incharge_name",
+   "fieldname": "je_name",
+   "fieldtype": "Data",
+   "label": "JE Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "land.person_in_charge",
+   "fetch_if_empty": 1,
+   "fieldname": "person_in_charge",
+   "fieldtype": "Data",
+   "label": "Person in Charge"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "land.sub_division",
+   "fieldname": "sub_division",
+   "fieldtype": "Data",
+   "label": "Sub Division",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "land.block",
+   "fieldname": "block",
+   "fieldtype": "Link",
+   "label": "Block",
+   "options": "Location",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "land.gp",
+   "fieldname": "gp",
+   "fieldtype": "Data",
+   "label": "GP",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "land.household_as_per_list",
+   "fieldname": "household_as_per_list",
+   "fieldtype": "Int",
+   "label": "Household as per List",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "surveyer_name_1",
+   "fieldtype": "Data",
+   "label": "Surveyor Name 1"
+  },
+  {
+   "fieldname": "surveyer_name_2",
+   "fieldtype": "Data",
+   "label": "Surveyor Name 2"
+  },
+  {
+   "bold": 1,
+   "fieldname": "survey_details_section",
+   "fieldtype": "Section Break",
+   "label": "SURVEY DETAILS"
+  },
+  {
+   "fieldname": "borwell_point_latitude",
+   "fieldtype": "Data",
+   "label": "Borwell Point Latitude"
+  },
+  {
+   "fieldname": "borwell_point_longitude",
+   "fieldtype": "Data",
+   "label": "Borwell Point Longitude"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "main_line_110_mm_length_in_meters",
+   "fieldtype": "Data",
+   "label": "Main Line (110 mm) Length in Meters"
+  },
+  {
+   "fieldname": "distribution_line__90_mm_length_in_meters",
+   "fieldtype": "Data",
+   "label": "Distribution Line ( 90 mm) Length in Meters"
+  },
+  {
+   "fieldname": "length_of_road_cutting_in_meters",
+   "fieldtype": "Data",
+   "label": "Length of Road Cutting in Meters"
+  },
+  {
+   "bold": 1,
+   "fieldname": "no_of_junctions_section",
+   "fieldtype": "Section Break",
+   "label": "NO OF JUNCTIONS"
+  },
+  {
+   "fieldname": "l_junctions",
+   "fieldtype": "Data",
+   "label": "L Junctions"
+  },
+  {
+   "fieldname": "t_junctions",
+   "fieldtype": "Data",
+   "label": "T Junctions"
+  },
+  {
+   "fieldname": "x_junctions",
+   "fieldtype": "Data",
+   "label": "X Junctions"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_household_count",
+   "fieldtype": "Int",
+   "label": "Actual Household Count"
+  },
+  {
+   "fieldname": "household_difference",
+   "fieldtype": "Int",
+   "label": "Household Difference"
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "REMARKS"
+  },
+  {
+   "bold": 1,
+   "fieldname": "survey_attachments_section",
+   "fieldtype": "Section Break",
+   "label": "SURVEY ATTACHMENTS"
+  },
+  {
+   "fieldname": "survey_manual_drawing",
+   "fieldtype": "Attach",
+   "label": "Survey Manual Drawing"
+  },
+  {
+   "description": "Kindly Attach Excel File here",
+   "fieldname": "household_details",
+   "fieldtype": "Attach",
+   "label": "Household Details"
+  },
+  {
+   "fieldname": "surveyer_sign",
+   "fieldtype": "Attach",
+   "label": "Surveyor Sign"
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "peron_in_charge_sign",
+   "fieldtype": "Attach",
+   "label": "Person in Charge Sign"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-12-03 18:07:07.054064",
+ "modified_by": "Administrator",
+ "module": "Pms",
+ "name": "Pipeline Survey",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

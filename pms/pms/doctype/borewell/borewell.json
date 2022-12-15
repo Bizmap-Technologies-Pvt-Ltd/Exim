@@ -1,0 +1,277 @@
+{
+ "actions": [],
+ "allow_auto_repeat": 1,
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-11-08 13:22:02.566192",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "borewell_basic_details_section",
+  "naming_series",
+  "je_name",
+  "je_mobile_no",
+  "village",
+  "column_break_6",
+  "block",
+  "total_villages_under_block",
+  "bore_type",
+  "land_type",
+  "borewell_specifications_section",
+  "contractor",
+  "mc_code",
+  "depth",
+  "column_break_14",
+  "start_date",
+  "borewell_completion",
+  "end_date",
+  "borewell_status",
+  "material_consumed_section",
+  "150",
+  "100",
+  "flange_cutter",
+  "gravels",
+  "column_break_21",
+  "pipe_type",
+  "strainer",
+  "strainer_150_mm",
+  "reducer",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "borewell_basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "BOREWELL BASIC DETAILS"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "BOR-22-23-.####"
+  },
+  {
+   "fieldname": "je_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "JE Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "je_mobile_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "JE Mobile No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Village",
+   "options": "Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "village.parent_location",
+   "fieldname": "block",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Block",
+   "options": "Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bore_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Bore Type",
+   "options": "\nRig/DTH\nWater Jet/Hand\nRotary"
+  },
+  {
+   "fieldname": "land_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Land Type",
+   "options": "Govt\nPrivate"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Borewell",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "borewell_specifications_section",
+   "fieldtype": "Section Break",
+   "label": "BOREWELL SPECIFICATIONS"
+  },
+  {
+   "fieldname": "contractor",
+   "fieldtype": "Link",
+   "label": "Contractor",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "mc_code",
+   "fieldtype": "Data",
+   "label": "MC Code"
+  },
+  {
+   "description": "In Feet",
+   "fieldname": "depth",
+   "fieldtype": "Data",
+   "label": "Depth"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "depends_on": "eval:(doc.borewell_status == \"Completed\")",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "mandatory_depends_on": "doc.borewell_status == \"Completed\""
+  },
+  {
+   "fieldname": "borewell_status",
+   "fieldtype": "Select",
+   "label": "Borewell Status",
+   "options": "Pending\nIn Process\nCompleted\nFailed"
+  },
+  {
+   "bold": 1,
+   "fieldname": "material_consumed_section",
+   "fieldtype": "Section Break",
+   "label": "MATERIAL CONSUMED"
+  },
+  {
+   "fieldname": "150",
+   "fieldtype": "Data",
+   "label": "150 mm PVC Pipe"
+  },
+  {
+   "depends_on": "eval:doc.bore_type != \"Rig/DTH\"",
+   "fieldname": "100",
+   "fieldtype": "Data",
+   "label": "100 mm PVC Pipe"
+  },
+  {
+   "depends_on": "eval:doc.bore_type != \"Rig/DTH\"",
+   "fieldname": "strainer",
+   "fieldtype": "Data",
+   "label": "Strainer 100 mm"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pipe_type",
+   "fieldtype": "Select",
+   "label": "Pipe Type",
+   "options": "CD\nCS\nCM"
+  },
+  {
+   "fetch_from": "block.total_no_of_villages",
+   "fieldname": "total_villages_under_block",
+   "fieldtype": "Data",
+   "label": "Total Villages Under Block",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "borewell_completion",
+   "fieldtype": "Check",
+   "label": "Borewell Completion"
+  },
+  {
+   "depends_on": "eval:doc.bore_type != \"Rig/DTH\"",
+   "fieldname": "reducer",
+   "fieldtype": "Data",
+   "label": "Reducer"
+  },
+  {
+   "depends_on": "eval:doc.bore_type != \"Rig/DTH\"",
+   "fieldname": "flange_cutter",
+   "fieldtype": "Data",
+   "label": "Flange Cutter"
+  },
+  {
+   "depends_on": "eval:doc.bore_type != \"Rig/DTH\"",
+   "fieldname": "gravels",
+   "fieldtype": "Data",
+   "label": "Gravels"
+  },
+  {
+   "depends_on": "eval:doc.bore_type != \"Rig/DTH\"",
+   "fieldname": "strainer_150_mm",
+   "fieldtype": "Data",
+   "label": "Strainer 150 mm"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-11-22 10:59:45.333111",
+ "modified_by": "Administrator",
+ "module": "Pms",
+ "name": "Borewell",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "village",
+ "track_changes": 1
+}

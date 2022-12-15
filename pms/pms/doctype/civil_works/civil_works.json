@@ -1,0 +1,233 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-11-09 22:18:36.875341",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "civil_basic_details_section",
+  "naming_series",
+  "borewell",
+  "village",
+  "je_name",
+  "je_mobile_no",
+  "column_break_4",
+  "block",
+  "total_villages_under_block",
+  "bore_type",
+  "land_type",
+  "start_date",
+  "end_date",
+  "civil_specification_section",
+  "contractor",
+  "work_details",
+  "material_consumption_section",
+  "poly_sheets",
+  "cement_bags",
+  "foundation_bolt",
+  "bricks__nos_",
+  "column_break_20",
+  "sand_cft",
+  "aggregate_cft",
+  "concrete_rings",
+  "manhole_cover",
+  "section_break_24",
+  "civil_material",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "CIV-.YYYY.-.####"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Civil Works",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "borewell",
+   "fieldtype": "Link",
+   "label": "Borewell",
+   "options": "Borewell"
+  },
+  {
+   "fetch_from": "borewell.village",
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "Village",
+   "options": "Location"
+  },
+  {
+   "fetch_from": "borewell.je_name",
+   "fieldname": "je_name",
+   "fieldtype": "Data",
+   "label": "JE Name"
+  },
+  {
+   "fetch_from": "borewell.je_mobile_no",
+   "fieldname": "je_mobile_no",
+   "fieldtype": "Data",
+   "label": "JE Mobile No"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "borewell.block",
+   "fieldname": "block",
+   "fieldtype": "Link",
+   "label": "Block",
+   "options": "Location"
+  },
+  {
+   "bold": 1,
+   "fieldname": "civil_basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "CIVIL BASIC DETAILS"
+  },
+  {
+   "fetch_from": "borewell.total_villages_under_block",
+   "fieldname": "total_villages_under_block",
+   "fieldtype": "Data",
+   "label": "Total Villages Under Block"
+  },
+  {
+   "fetch_from": "borewell.bore_type",
+   "fieldname": "bore_type",
+   "fieldtype": "Data",
+   "label": "Bore Type"
+  },
+  {
+   "fetch_from": "borewell.land_type",
+   "fieldname": "land_type",
+   "fieldtype": "Data",
+   "label": "Land Type"
+  },
+  {
+   "bold": 1,
+   "fieldname": "civil_specification_section",
+   "fieldtype": "Section Break",
+   "label": "CIVIL SPECIFICATION"
+  },
+  {
+   "fieldname": "contractor",
+   "fieldtype": "Link",
+   "label": "Contractor",
+   "options": "Supplier"
+  },
+  {
+   "fetch_from": "borewell.start_date",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fetch_from": "borewell.end_date",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "work_details",
+   "fieldtype": "Table",
+   "label": "Work Details",
+   "options": "Civil Items"
+  },
+  {
+   "bold": 1,
+   "fieldname": "material_consumption_section",
+   "fieldtype": "Section Break",
+   "label": "MATERIAL CONSUMPTION"
+  },
+  {
+   "fieldname": "cement_bags",
+   "fieldtype": "Float",
+   "label": "Cement (Bags)"
+  },
+  {
+   "fieldname": "sand_cft",
+   "fieldtype": "Float",
+   "label": "Sand (CFT)"
+  },
+  {
+   "fieldname": "aggregate_cft",
+   "fieldtype": "Float",
+   "label": "Aggregate (CFT) "
+  },
+  {
+   "fieldname": "civil_material",
+   "fieldtype": "Table",
+   "label": "STEEL ITEMS",
+   "options": "Civil Material"
+  },
+  {
+   "fieldname": "poly_sheets",
+   "fieldtype": "Int",
+   "label": "Poly Sheets"
+  },
+  {
+   "fieldname": "foundation_bolt",
+   "fieldtype": "Int",
+   "label": "Foundation Bolt"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "bricks__nos_",
+   "fieldtype": "Int",
+   "label": "Bricks ( Nos )"
+  },
+  {
+   "fieldname": "manhole_cover",
+   "fieldtype": "Int",
+   "label": "Manhole Cover"
+  },
+  {
+   "fieldname": "concrete_rings",
+   "fieldtype": "Int",
+   "label": "Concrete Rings"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-11-11 10:43:04.708100",
+ "modified_by": "Administrator",
+ "module": "Pms",
+ "name": "Civil Works",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "village",
+ "track_changes": 1
+}

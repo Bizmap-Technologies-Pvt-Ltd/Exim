@@ -1,0 +1,399 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-10-13 10:14:03.019422",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "naming_series",
+  "date_of_land_identification",
+  "je_incharge_name",
+  "person_in_charge",
+  "column_break_5",
+  "project",
+  "customer",
+  "je_contact_no",
+  "land_status",
+  "type_of_tubewell",
+  "section_break_5",
+  "sub_division",
+  "block",
+  "gp",
+  "village",
+  "household_as_per_list",
+  "column_break_18",
+  "contact_persons",
+  "section_break_11",
+  "jl_no",
+  "plot_no",
+  "land_owner_type",
+  "land_owner_name",
+  "land_owner_mobile",
+  "land_owner_aadhar_no",
+  "gp_pradhan_number",
+  "column_break_17",
+  "land_owner_id_proof",
+  "land_owner_passport_photo",
+  "noc",
+  "land_specification_section",
+  "size",
+  "bore_machine_access",
+  "electrical_wires_if_any",
+  "obstructions_if_any_in_land",
+  "column_break_24",
+  "latitude",
+  "longitude",
+  "landmark_near_by",
+  "approx_ground_water_level",
+  "land_attachment",
+  "section_break_28",
+  "remarks_if_any",
+  "section_break_30",
+  "je_sign",
+  "land_owner_sign_finger_mark",
+  "rmn_infra_representative_sign",
+  "bipl_infra_representative_signature",
+  "bipl",
+  "column_break_34",
+  "mobile_je",
+  "mobile_lo",
+  "mobile_rmn",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Land Basic Detials"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "LAND-IDEN-.YYYY.-.#####"
+  },
+  {
+   "fieldname": "date_of_land_identification",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date Of Land Identification",
+   "reqd": 1
+  },
+  {
+   "fieldname": "je_incharge_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "JE Incharge Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sub_division",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sub Division"
+  },
+  {
+   "fieldname": "block",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Block",
+   "options": "Location"
+  },
+  {
+   "fieldname": "gp",
+   "fieldtype": "Data",
+   "label": "G.P"
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "VILLAGE NAME",
+   "options": "Location"
+  },
+  {
+   "fieldname": "household_as_per_list",
+   "fieldtype": "Int",
+   "label": "Household As Per List"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "jl_no",
+   "fieldtype": "Data",
+   "label": "JL No"
+  },
+  {
+   "fieldname": "plot_no",
+   "fieldtype": "Data",
+   "label": "Plot No"
+  },
+  {
+   "depends_on": "eval:(doc.land_owner_type == \"Private\")",
+   "fieldname": "land_owner_name",
+   "fieldtype": "Data",
+   "label": "Land Owner Name"
+  },
+  {
+   "fieldname": "land_owner_mobile",
+   "fieldtype": "Data",
+   "label": "Land Owner Mobile"
+  },
+  {
+   "fieldname": "gp_pradhan_number",
+   "fieldtype": "Data",
+   "label": "Contact Person at Village"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "collapsible": 1,
+   "fieldname": "land_specification_section",
+   "fieldtype": "Section Break",
+   "label": "Land Specification"
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "label": "Size "
+  },
+  {
+   "fieldname": "bore_machine_access",
+   "fieldtype": "Data",
+   "label": "Bore machine Access"
+  },
+  {
+   "fieldname": "electrical_wires_if_any",
+   "fieldtype": "Data",
+   "label": "Electrical Wires If Any"
+  },
+  {
+   "fieldname": "obstructions_if_any_in_land",
+   "fieldtype": "Data",
+   "label": "Obstructions If Any In Land"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "landmark_near_by",
+   "fieldtype": "Data",
+   "label": "landmark Near By "
+  },
+  {
+   "fieldname": "approx_ground_water_level",
+   "fieldtype": "Data",
+   "label": "Approx Ground Water Level "
+  },
+  {
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "remarks_if_any",
+   "fieldtype": "Small Text",
+   "label": "Remarks If Any"
+  },
+  {
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "je_sign",
+   "fieldtype": "Attach Image",
+   "label": "JE Sign"
+  },
+  {
+   "fieldname": "mobile_je",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "land_owner_sign_finger_mark",
+   "fieldtype": "Attach Image",
+   "label": "Land owner Sign / Finger Mark"
+  },
+  {
+   "fieldname": "mobile_lo",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "rmn_infra_representative_sign",
+   "fieldtype": "Attach Image",
+   "label": "BIPL Infra Representative Sign"
+  },
+  {
+   "fieldname": "mobile_rmn",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Land Identification",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:(doc.land_owner_type == \"Private\")",
+   "fieldname": "land_owner_passport_photo",
+   "fieldtype": "Attach Image",
+   "label": "Land Owner Passport Photo"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "person_in_charge",
+   "fieldtype": "Data",
+   "label": "Person In-charge"
+  },
+  {
+   "depends_on": "eval:(doc.land_owner_type == \"Private\")",
+   "fieldname": "land_owner_id_proof",
+   "fieldtype": "Attach Image",
+   "label": "Land Owner ID Proof"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude",
+   "precision": "8"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude",
+   "precision": "8"
+  },
+  {
+   "fieldname": "land_attachment",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "depends_on": "eval:(doc.land_owner_type == \"Private\")",
+   "fieldname": "noc",
+   "fieldtype": "Attach Image",
+   "label": "NOC"
+  },
+  {
+   "fieldname": "land_owner_type",
+   "fieldtype": "Select",
+   "label": "Land Type",
+   "options": "Private\nGovernment"
+  },
+  {
+   "fieldname": "bipl_infra_representative_signature",
+   "fieldtype": "Signature",
+   "label": "BIPL Infra Representative Signature"
+  },
+  {
+   "fieldname": "bipl",
+   "fieldtype": "HTML",
+   "label": "BIPL",
+   "options": "BIPL Infra Representative Signature"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "depends_on": "eval:(doc.land_owner_type == \"Private\")",
+   "fieldname": "land_owner_aadhar_no",
+   "fieldtype": "Data",
+   "label": "Land Owner Aadhar No",
+   "length": 12,
+   "mandatory_depends_on": "eval:(doc.land_owner_type == \"Private\")"
+  },
+  {
+   "fieldname": "land_status",
+   "fieldtype": "Select",
+   "label": "Land Status",
+   "options": "\nSuccess\nFailed"
+  },
+  {
+   "fieldname": "je_contact_no",
+   "fieldtype": "Data",
+   "label": "JE Contact No"
+  },
+  {
+   "fieldname": "type_of_tubewell",
+   "fieldtype": "Select",
+   "label": "Type of Tubewell",
+   "options": "DTH BORE\nHAND BORE"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_persons",
+   "fieldtype": "Data",
+   "label": "Contact Persons"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-12-10 15:03:35.360052",
+ "modified_by": "Administrator",
+ "module": "Pms",
+ "name": "Land Identification",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "village",
+ "track_changes": 1
+}
