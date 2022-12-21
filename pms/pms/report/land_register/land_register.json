@@ -1,0 +1,34 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2022-12-20 18:44:43.896931",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "BIPL",
+ "modified": "2022-12-20 19:14:46.452916",
+ "modified_by": "Administrator",
+ "module": "Pms",
+ "name": "Land Register",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT  A.village AS \"Village Name:Data:130\",\r\n        A.sub_division AS \"Sub Division:Data:100\",\r\n        A.block AS \"Block:Data:75\",\r\n        A.date_of_land_identification AS \"Date of Land Identification:Date:100\",\r\n        A.je_incharge_name AS \"JE Incharge Name:Data:110\",\r\n        A.plot_no AS \"Plot No:Data:90\",\r\n        A.jl_no AS \"JL No:Data:90\",\r\n        A.person_in_charge AS \"Person in Charge:Data:120\",\r\n        A.size AS \"Size:Float:90\",\r\n        A.bore_machine_access AS \"Bore Machine Access:Data:145\",\r\n        A.noc_select AS \"NOC:Data:70\",\r\n        A.obstructions_if_any_in_land AS \"Obstructions:Data:160\",\r\n        A.electrical_wires_if_any AS \"Electrical Wires:Data:160\",\r\n        A.latitude AS \"Latitude:Data:100\",\r\n        A.longitude AS \"Longitude:Data:100\",\r\n        CONCAT('<a href=\"', \"https://maps.google.com/?q=\",A.latitude,\",\",A.longitude,\"&z=16\", '\"target=\"_blank\">', \"Open Location\", '</a>') AS \"Locations\"\r\n        FROM `tabLand Identification`A\r\n        WHERE A.block= %(block)s;",
+ "ref_doctype": "Land Identification",
+ "report_name": "Land Register",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "MIS Executive"
+  }
+ ]
+}

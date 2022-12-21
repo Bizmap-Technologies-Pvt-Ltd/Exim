@@ -9,9 +9,9 @@ app_color = "grey"
 app_email = "hello@bizmap.in"
 app_license = "MIT"
 
+fixtures = ['Custom Field']
 # Includes in <head>
 # ------------------
-
 # include js, css files in header of desk.html
 # app_include_css = "/assets/pms/css/pms.css"
 # app_include_js = "/assets/pms/js/pms.js"
